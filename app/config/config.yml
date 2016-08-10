@@ -66,3 +66,16 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+nelmio_api_doc:
+    name:   Nextgen API documentation
+    sandbox:
+        authentication:
+            name: access_token
+            delivery: query
+        enabled:  true # default: true, you can set this parameter to `false` to disable the sandbox
+        accept_type: application/json
+        body_format: json
+        request_format:
+            method: format_param
+            default_format: json
